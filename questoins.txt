@@ -1,0 +1,14 @@
+MSE e normalizata?
+     Cand o aplic pe niste date cu o varianta mare si predictie acceptabila obtin MSE ft mare, cand aplic regresia pe niste date 
+    intr-un interval foarte mic obtin MSE mic.
+
+Trebuie sa schimb forma completa daca folosesc RMSE in loc de MSE?
+
+RMSE of test > RMSE of train => OVER FITTING of the data.
+RMSE of test < RMSE of train => UNDER FITTING of the data.
+
+I think you have two different types of questions there. One thing is what you ask in the title: "What are good RMSE values?" and another thing is how to compare models with different datasets using RMSE.
+
+For the first, i.e., the question in the title, it is important to recall that RMSE has the same unit as the dependent variable (DV). It means that there is no absolute good or bad threshold, however you can define it based on your DV. For a datum which ranges from 0 to 1000, an RMSE of 0.7 is small, but if the range goes from 0 to 1, it is not that small anymore. However, although the smaller the RMSE, the better, you can make theoretical claims on levels of the RMSE by knowing what is expected from your DV in your field of research. Keep in mind that you can always normalize the RMSE.
+
+For the second question, i.e., about comparing two models with different datasets by using RMSE, you may do that provided that the DV is the same in both models. Here, the smaller the better but remember that small differences between those RMSE may not be relevant or even significant.
