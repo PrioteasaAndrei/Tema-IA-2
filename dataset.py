@@ -34,13 +34,12 @@ def complex_dataset(n_samples = 300):
     return x,sine_wave
 
 
-def remodel_complex_dataset(n_samples = 300):
+def remodel_complex_dataset(n_samples = 300,points=12):
     x = np.linspace(-10, 10, n_samples) # coordinates
     noise_sample = np.random.normal(0,0.5,n_samples)
     sine_wave = x + np.sin(4*x) + noise_sample
     y = sine_wave
 
-    points = 12
     names = []
     for i in range(points):
         names.append("a"+str(i))
